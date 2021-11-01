@@ -1,0 +1,29 @@
+<h1> Workout Planner </h1>
+
+<table>
+  <tr>
+ <th>Workout</th>
+ <th>Sets</th> 
+  </tr>
+ <tr> 
+ <td> {{ workoutInput.value }}</td>
+ <td>set 1</td> 
+ </tr>
+
+</table>  
+
+<div>
+<input 
+type="text" 
+id="set" 
+#workoutInput> 
+<button type="submit"> Add Workout</button> 
+<hr>
+
+<input 
+type="text" 
+id="set" 
+#setInput>
+
+<button (click)="onAddSet()">Add Set</button>
+</div>

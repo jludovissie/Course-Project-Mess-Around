@@ -1,0 +1,32 @@
+<h1> Contact Us </h1> 
+<p>Interested in lessons or training?  We'd love to hear from you! </p>
+<form [formGroup]="contactUs" (ngSubmit)="onSubmit()">
+ <div>
+  <label for="fname">First Name:</label>
+  <input type="text" id="fname" formControlName="fname">
+  <hr>
+  <label for="lname">Last Name: </label>
+  <input type="text" id="lname" formControlName="lname">
+  <hr>
+  <label for="phone">Phone Number:</label> 
+  <input type="text" id="phone" formControlName="phone">
+  <hr> 
+  <label for="email">Email:</label>
+  <input type="text" id="email" formControlName="email">
+  <hr>
+  </div> 
+  <p> School:</p>
+  <hr>
+    <div class="radio" *ngFor="let school of school">
+      <label>
+        <input 
+          type="radio" 
+          [value]="school"
+          formControlName="school">
+          {{ school }}
+      </label>    
+    </div>  
+    <hr>
+    <button> Submit </button>
+
+</form>  
