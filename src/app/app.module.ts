@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from "@angular/router"
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -11,30 +11,29 @@ import { HomeComponent } from './home/home.component';
 import { WorkoutComponent } from './workout/workout.component';
 
 
-
-const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path:'home', component: HomeComponent },
-  {path:'contact', component: ReactiveformComponent},
-  {path:'workout', component: WorkoutComponent}
-  
+const appRoutes = [
+  { path: '', component: HomeComponent, pathMatch:'full'},
+  { path:'home', component: HomeComponent},
+  { path:'workout', component: WorkoutComponent},
+  { path:'contact', component: ReactiveformComponent}
 ]
-
-
 @NgModule({
-    imports:      [ 
-                  BrowserModule, 
-                  ReactiveFormsModule, 
-                  FormsModule ,
-                  RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+  ],
 
-    declarations: [ 
-                  AppComponent, 
-                  HelloComponent, 
-                  NavbarComponent,
-                  HomeComponent,
-                  ReactiveformComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    NavbarComponent,
+    HomeComponent,
+    ReactiveformComponent,
+    WorkoutComponent,
+  ],
 
-  bootstrap:    [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

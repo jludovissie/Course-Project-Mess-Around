@@ -1,29 +1,24 @@
-<h1> Workout Planner </h1>
+<h1>Workout Planner</h1>
 
 <table>
   <tr>
- <th>Workout</th>
- <th>Sets</th> 
+    <th>Workout</th>
+    <th>Sets</th>
+    <th>Delete</th>
   </tr>
- <tr> 
- <td> {{ workoutInput.value }}</td>
- <td>set 1</td> 
- </tr>
-
-</table>  
+  <tr *ngFor="let workout of workouts; let i = index">
+    <td>{{ workout.workout }}</td>
+    <td>{{ workout.Set }}</td>
+    <td (click)="onDelete(i)">x</td>
+  </tr>
+</table>
 
 <div>
-<input 
-type="text" 
-id="set" 
-#workoutInput> 
-<button type="submit"> Add Workout</button> 
-<hr>
-
-<input 
-type="text" 
-id="set" 
-#setInput>
-
-<button (click)="onAddSet()">Add Set</button>
+  <input type="text" [(ngModel)]="workout"  />
+  <input type="text" [(ngModel)]="set"/>
+  <button (click)="onAddWorkout()">Add Workout</button>
+  
+  <hr/>
+  <!-- <button (click)="onAddSet()">Add Set</button> -->
 </div>
+<h2> Timer: {{ timeLeft }} <button (click)="startRest()">Start Timer </button> </h2>
