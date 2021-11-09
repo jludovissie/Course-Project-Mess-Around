@@ -1,0 +1,18 @@
+<h1> Library of Pitches </h1>
+<div *ngFor="let pitch of myPitches; let i = index">
+<ul> 
+ <li>{{ pitch.name }}</li>  <li> {{ pitch.form }}</li>
+  
+</ul>  
+  
+</div>
+<h2> Pitching Journal </h2>
+<label for = "pitch">What Pitch did you work on? </label>
+<input type= "text" name="pitch"> 
+<hr> 
+<div class="slidecontainer">
+<label for ="range">Mastery of the Pitch </label>  
+<input type="range" min="1" max="100" value="50" class="slider" id="myRange" (click)="slider()"> <p> On a scale of 1 to 100, you are a {{ value.value }} on comfort level with {{ pitch }} </p>
+<button> Submit </button>
+</div>
+   

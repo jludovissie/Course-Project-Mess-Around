@@ -10,12 +10,15 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { HomeComponent } from './home/home.component';
 import { WorkoutComponent } from './workout/workout.component';
 
+import { LibraryComponent } from './library/library.component';
+
 
 const appRoutes = [
   { path: '', component: HomeComponent, pathMatch:'full'},
   { path:'home', component: HomeComponent},
   { path:'workout', component: WorkoutComponent},
-  { path:'contact', component: ReactiveformComponent}
+  { path:'contact', component: ReactiveformComponent} ,
+  {path: 'library', component: LibraryComponent} 
 ]
 @NgModule({
   imports: [
@@ -32,6 +35,7 @@ const appRoutes = [
     HomeComponent,
     ReactiveformComponent,
     WorkoutComponent,
+    LibraryComponent
   ],
 
   bootstrap: [AppComponent],
