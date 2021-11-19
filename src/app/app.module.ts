@@ -19,7 +19,8 @@ const appRoutes = [
   { path:'home', component: HomeComponent},
   { path:'workout', component: WorkoutComponent},
   { path:'contact', component: ReactiveformComponent} ,
-  {path: 'library', component: LibraryComponent} 
+  {path: 'library', component: LibraryComponent},
+  {path: 'pricing', component: PricingComponent} 
 ]
 @NgModule({
   imports: [
