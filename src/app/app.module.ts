@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { WorkoutComponent } from './workout/workout.component';
 
 import { LibraryComponent } from './library/library.component';
+import { PricingComponent } from './pricing/pricing.component';
 
 
 const appRoutes = [
@@ -35,7 +36,8 @@ const appRoutes = [
     HomeComponent,
     ReactiveformComponent,
     WorkoutComponent,
-    LibraryComponent
+    LibraryComponent,
+    PricingComponent
   ],
 
   bootstrap: [AppComponent],
