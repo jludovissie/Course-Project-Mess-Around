@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-bloglibrary',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BloglibraryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,
+              private route: ActivatedRoute  ) { }
 
   ngOnInit() {
   }
-
+  onForm(){
+    this.router.navigate(['blog'], {relativeTo: this.route})
+  }
 }

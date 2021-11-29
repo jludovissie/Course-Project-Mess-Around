@@ -1,6 +1,16 @@
 .column {
   float: left;
-  width: 25%;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
 }
 
 /* Clear floats after the columns */
@@ -8,4 +18,12 @@
   content: "";
   display: table;
   clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }

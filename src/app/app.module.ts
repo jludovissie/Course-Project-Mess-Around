@@ -12,8 +12,9 @@ import { WorkoutComponent } from './workout/workout.component';
 
 import { LibraryComponent } from './library/library.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { BlogComponent } from './blog/blog.component';
+
 import { BloglibraryComponent } from './bloglibrary/bloglibrary.component';
+import { BlogComponent } from './bloglibrary/blog/blog.component';
 
 
 const appRoutes = [
@@ -23,8 +24,11 @@ const appRoutes = [
   { path:'contact', component: ReactiveformComponent} ,
   {path: 'library', component: LibraryComponent},
   {path: 'pricing', component: PricingComponent},
-  {path: 'blog', component: BlogComponent},
-  {path: 'blogs', component: BloglibraryComponent } 
+  { path: 'blogs', 
+    component: BloglibraryComponent,  
+    children: [
+    {path:'blog', component: BlogComponent, outlet: 'form'}]
+} 
 ]
 @NgModule({
   imports: [
